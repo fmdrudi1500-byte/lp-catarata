@@ -90,11 +90,12 @@ a{text-decoration:none;color:inherit}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 3s ease-in-out 2}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(1.2)}}
 .hero-title{
-  font-family:var(--font-heading);font-size:clamp(30px,5vw,50px);
-  font-weight:700;line-height:1.15;margin-bottom:20px;letter-spacing:-0.5px;color:var(--white);
+  font-family:var(--font-heading);font-size:clamp(38px,7vw,68px);
+  font-weight:700;line-height:1.1;margin-bottom:20px;letter-spacing:-1px;color:var(--white);
 }
 .hero-title em{font-style:italic;color:var(--gold)}
-.hero-desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.82);margin-bottom:24px;max-width:540px}
+.hero-desc{font-size:17px;line-height:1.75;color:rgba(255,255,255,0.85);margin-bottom:24px;max-width:540px}
+.hero-desc .destaque-10x{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:800;font-size:20px;padding:2px 10px;border-radius:6px;letter-spacing:0.5px;vertical-align:middle;margin-left:2px}
 .hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
 .pill{
   display:inline-flex;align-items:center;gap:6px;
@@ -258,7 +259,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .media-icon{margin:0 auto}
 }
 @media(max-width:768px){
-  .hero-title{font-size:clamp(26px,6vw,36px)}
+  .hero-title{font-size:clamp(34px,8vw,46px)}
   .hero-inner{padding:28px 20px 36px}
   .testimonials-grid{grid-template-columns:1fr}
   .section{padding:52px 20px}
@@ -289,13 +290,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   <div class="hero-inner">
     <div class="hero-badge">Instituto da Catarata — Drudi e Almeida</div>
     <h1 class="hero-title">Volte a enxergar com <em>nitidez e cores vivas</em></h1>
-    <p class="hero-desc">Pacote cirúrgico com exames e lente importada. Especialistas renomados, tecnologia de ponta e parcelamento em até 10x.</p>
+    <p class="hero-desc">Pacote cirúrgico com exames e lente importada. Especialistas renomados, tecnologia de ponta e parcelamento em até <span class="destaque-10x">10x</span> sem juros.</p>
     <div class="hero-pills">
       <span class="pill"><span class="pill-check">✓</span> Procedimento indolor</span>
       <span class="pill"><span class="pill-check">✓</span> Pacote Cirúrgico</span>
       <span class="pill"><span class="pill-check">✓</span> Aceita convênios</span>
       <span class="pill"><span class="pill-check">✓</span> Lentes premium</span>
-      <span class="pill"><span class="pill-check">✓</span> Até 10x sem juros</span>
+      <span class="pill" style="background:var(--gold);color:var(--navy-deep);font-weight:800;border-color:var(--gold)"><span class="pill-check" style="color:var(--navy-deep)">✓</span> Até <strong>10x</strong> sem juros</span>
     </div>
     <select class="hero-select" id="unitSelect" onchange="updateWaLinks()">
       <option value="">📍 Selecione a unidade mais próxima</option>
