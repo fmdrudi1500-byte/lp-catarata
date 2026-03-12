@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cirurgia de Catarata em SP | Drudi e Almeida Clínicas Oftalmológicas</title>
+<meta name="description" content="Cirurgia de catarata com especialistas renomados e preços acessíveis em até 10x. 5 unidades em São Paulo. Receba o preço no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1e2a3a;
+  --navy-deep:#141e2b;
+  --navy-light:#2c3e50;
+  --gold:#c9a961;
+  --gold-light:#d4bb7e;
+  --gold-pale:rgba(201,169,97,0.08);
+  --cream:#faf8f4;
+  --white:#ffffff;
+  --text-dark:#1a1a2e;
+  --text-body:#3d3d4e;
+  --text-muted:#6b6b7b;
+  --green:#25D366;
+  --green-hover:#1ebe5a;
+  --border:rgba(0,0,0,0.06);
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md:0 4px 20px rgba(0,0,0,0.06);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.08);
+  --radius-sm:8px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --font-heading:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --max-w:1200px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);color:var(--text-body);line-height:1.7;background:var(--white);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+button{border:none;cursor:pointer;font-family:inherit}
+
+/* ===== HEADER ===== */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s ease;
+}
+.header.scrolled{box-shadow:var(--shadow-md)}
+.header-inner{
+  max-width:var(--max-w);margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;
+}
+.logo{height:52px;width:auto}
+.header-nav{display:flex;align-items:center;gap:32px}
+.header-nav a{
+  font-size:14px;font-weight:500;color:var(--text-muted);
+  letter-spacing:0.3px;transition:color 0.3s ease;
+}
+.header-nav a:hover{color:var(--navy)}
+.header-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green);color:var(--white);
+  padding:10px 24px;border-radius:100px;
+  font-size:14px;font-weight:600;
+  transition:background-color 0.3s ease,transform 0.2s ease;
+}
+.header-cta:hover{background:var(--green-hover);transform:translateY(-1px)}
+.header-cta svg{width:18px;height:18px;fill:currentColor}
+.menu-toggle{display:none;background:none;padding:8px}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0;transition:0.3s}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;
+  background:var(--white);overflow:hidden;padding-top:80px;
+}
+.hero-inner{
+  max-width:var(--max-w);margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  padding:60px 24px;position:relative;z-index:2;align-items:center;
+}
+.hero-content{color:var(--navy)}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(30,42,58,0.06);border:1px solid rgba(30,42,58,0.12);
+  padding:8px 16px;border-radius:100px;
+  font-size:13px;color:var(--navy-light);font-weight:500;
+  margin-bottom:28px;letter-spacing:0.5px;
+}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%}
+.hero-title{
+  font-family:var(--font-heading);font-size:clamp(34px,4.5vw,52px);
+  font-weight:600;line-height:1.15;margin-bottom:24px;letter-spacing:-0.5px;
+  color:var(--navy);
+}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-desc{
+  font-size:17px;line-height:1.7;color:var(--text-body);
+  margin-bottom:36px;max-width:480px;
+}
+.hero-benefits{list-style:none;margin-bottom:36px}
+.hero-benefits li{
+  display:flex;align-items:center;gap:12px;
+  font-size:15px;color:var(--text-body);margin-bottom:12px;
+}
+.hero-benefits li svg{width:20px;height:20px;fill:var(--gold);flex-shrink:0}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--green);color:var(--white);
+  padding:16px 36px;border-radius:100px;
+  font-size:16px;font-weight:600;
+  transition:background-color 0.3s ease,transform 0.2s ease;
+  box-shadow:0 4px 24px rgba(37,211,102,0.3);
+}
+.hero-cta:hover{background:var(--green-hover);transform:translateY(-2px)}
+.hero-cta svg{width:22px;height:22px;fill:currentColor}
+.hero-image{position:relative}
+.hero-image img{
+  width:100%;max-width:540px;border-radius:var(--radius-lg);
+  object-fit:cover;aspect-ratio:4/3;
+  box-shadow:0 20px 60px rgba(0,0,0,0.12);
+}
+.hero-image::after{
+  content:'';position:absolute;bottom:-16px;right:-16px;
+  width:180px;height:180px;border:2px solid rgba(201,169,97,0.2);
+  border-radius:var(--radius-lg);z-index:-1;
+}
+
+/* ===== SECTIONS ===== */
+.section{padding:100px 24px}
+.section-dark{background:var(--navy-deep);color:var(--white)}
+.section-cream{background:var(--cream)}
+.section-inner{max-width:var(--max-w);margin:0 auto}
+.section-header{text-align:center;margin-bottom:64px}
+.section-label{
+  display:inline-block;font-size:12px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+.section-title{
+  font-family:var(--font-heading);font-size:clamp(28px,4vw,42px);
+  font-weight:600;line-height:1.2;color:var(--text-dark);letter-spacing:-0.3px;
+}
+.section-dark .section-title{color:var(--white)}
+.section-subtitle{
+  font-size:16px;color:var(--text-muted);margin-top:16px;
+  max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7;
+}
+.section-dark .section-subtitle{color:rgba(255,255,255,0.6)}
+
+/* ===== ESPECIALIDADES ===== */
+.specs-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.spec-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;border-radius:100px;
+  background:rgba(201,169,97,0.1);border:1px solid rgba(201,169,97,0.25);
+  color:var(--gold-light);font-size:15px;font-weight:500;
+  transition:background-color 0.3s ease,transform 0.2s ease,border-color 0.3s ease;
+  cursor:default;
+}
+.spec-btn:hover{
+  background:rgba(201,169,97,0.2);border-color:var(--gold);transform:translateY(-2px);
+}
+
+/* ===== CTA BAND ===== */
+.cta-band{
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  padding:40px 24px;text-align:center;
+}
+.cta-band-inner{
+  max-width:var(--max-w);margin:0 auto;
+  display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;
+}
+.cta-band-text{
+  font-family:var(--font-heading);font-size:clamp(22px,3vw,30px);
+  font-weight:600;color:var(--navy-deep);
+}
+.cta-band-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--navy-deep);color:var(--white);
+  padding:14px 32px;border-radius:100px;
+  font-size:15px;font-weight:600;
+  transition:background-color 0.3s ease,transform 0.2s ease;
+  box-shadow:0 4px 16px rgba(0,0,0,0.2);
+}
+.cta-band-btn:hover{background:var(--navy);transform:translateY(-2px)}
+.cta-band-btn svg{width:20px;height:20px;fill:currentColor}
+
+/* ===== DIFERENCIAIS + FOTO (split layout) ===== */
+.diff-split{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.diff-split-image{position:relative;min-height:500px}
+.diff-split-image img{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;
+}
+.diff-split-content{
+  background:var(--cream);padding:56px 48px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.diff-split-content .section-label{text-align:left;margin-bottom:12px}
+.diff-split-content .section-title{
+  text-align:left;font-size:clamp(24px,3vw,34px);margin-bottom:32px;
+}
+.diff-item{
+  display:flex;gap:16px;margin-bottom:28px;
+}
+.diff-item:last-child{margin-bottom:0}
+.diff-item-icon{
+  flex-shrink:0;width:44px;height:44px;
+  background:var(--gold-pale);border:1px solid rgba(201,169,97,0.15);
+  border-radius:var(--radius-sm);
+  display:flex;align-items:center;justify-content:center;
+}
+.diff-item-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.diff-item-title{font-size:16px;font-weight:600;color:var(--text-dark);margin-bottom:4px}
+.diff-item-text{font-size:14px;line-height:1.7;color:var(--text-muted)}
+
+/* ===== SOBRE / MÉDICOS ===== */
+.doctor-section{padding:100px 24px}
+.doctor-card{
+  display:grid;grid-template-columns:400px 1fr;gap:56px;
+  align-items:start;margin-bottom:80px;
+  max-width:var(--max-w);margin-left:auto;margin-right:auto;
+}
+.doctor-card:last-child{margin-bottom:0}
+.doctor-card.reverse{grid-template-columns:1fr 400px;direction:rtl}
+.doctor-card.reverse > *{direction:ltr}
+.doctor-photo{position:relative}
+.doctor-photo img{
+  border-radius:var(--radius-lg);width:100%;aspect-ratio:3/4;
+  object-fit:cover;box-shadow:var(--shadow-lg);
+}
+.doctor-photo-accent{
+  position:absolute;top:-12px;left:-12px;
+  width:100px;height:100px;background:var(--gold-pale);
+  border:2px solid rgba(201,169,97,0.15);
+  border-radius:var(--radius-md);z-index:-1;
+}
+.doctor-info{padding-top:20px}
+.doctor-name{
+  font-family:var(--font-heading);font-size:32px;font-weight:600;
+  color:var(--text-dark);margin-bottom:4px;
+}
+.doctor-role{
+  font-size:14px;color:var(--gold);font-weight:600;
+  letter-spacing:0.5px;text-transform:uppercase;margin-bottom:24px;
+}
+.doctor-text{font-size:16px;line-height:1.8;color:var(--text-body);margin-bottom:20px}
+.doctor-divider{width:60px;height:2px;background:var(--gold);margin:28px 0;border-radius:2px}
+.doctor-highlight{
+  font-size:15px;line-height:1.8;color:var(--text-muted);
+  padding-left:20px;border-left:3px solid var(--gold);
+}
+
+/* ===== DEPOIMENTOS ===== */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testimonial-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--radius-md);padding:36px;
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.testimonial-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.testimonial-stars{display:flex;gap:2px;margin-bottom:20px}
+.testimonial-stars svg{width:18px;height:18px;fill:var(--gold)}
+.testimonial-text{
+  font-size:15px;line-height:1.8;color:var(--text-body);
+  margin-bottom:24px;font-style:italic;
+}
+.testimonial-author{
+  display:flex;align-items:center;gap:14px;
+  padding-top:20px;border-top:1px solid var(--border);
+}
+.testimonial-avatar{
+  width:44px;height:44px;border-radius:50%;background:var(--navy);
+  color:var(--white);display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:600;flex-shrink:0;
+}
+.testimonial-name{font-size:14px;font-weight:600;color:var(--text-dark)}
+.testimonial-procedure{font-size:12px;color:var(--text-muted);margin-top:2px}
+
+/* ===== CLÍNICAS ===== */
+.clinica-showcase{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:48px;
+  align-items:center;margin-bottom:56px;
+}
+.clinica-img{
+  border-radius:var(--radius-lg);width:100%;aspect-ratio:16/10;
+  object-fit:cover;box-shadow:var(--shadow-lg);
+}
+.clinica-info h3{
+  font-family:var(--font-heading);font-size:28px;font-weight:600;
+  color:var(--text-dark);margin-bottom:16px;
+}
+.clinica-info p{font-size:15px;line-height:1.8;color:var(--text-body);margin-bottom:24px}
+.unidades-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.unidade-card{
+  text-align:center;padding:28px 16px;background:var(--white);
+  border:1px solid var(--border);border-radius:var(--radius-md);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.unidade-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.unidade-pin{
+  width:40px;height:40px;margin:0 auto 12px;
+  background:var(--gold-pale);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.unidade-pin svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.unidade-name{font-size:15px;font-weight:600;color:var(--text-dark);margin-bottom:4px}
+.unidade-city{font-size:12px;color:var(--text-muted)}
+
+/* ===== MÍDIA ===== */
+.media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.media-card{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-radius:var(--radius-md);overflow:hidden;
+  border:1px solid var(--border);background:var(--white);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.media-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.media-thumb{position:relative;overflow:hidden;min-height:200px}
+.media-thumb img{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;transition:transform 0.4s ease;
+}
+.media-card:hover .media-thumb img{transform:scale(1.05)}
+.media-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:56px;height:56px;background:rgba(255,255,255,0.95);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  transition:transform 0.3s ease;
+}
+.media-card:hover .media-play{transform:translate(-50%,-50%) scale(1.1)}
+.media-play svg{width:20px;height:20px;fill:var(--navy);margin-left:3px}
+.media-body{padding:28px;display:flex;flex-direction:column;justify-content:center}
+.media-source{
+  font-size:11px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+}
+.media-title{
+  font-family:var(--font-heading);font-size:20px;font-weight:600;
+  color:var(--text-dark);line-height:1.35;margin-bottom:12px;
+}
+.media-desc{font-size:13px;line-height:1.7;color:var(--text-muted)}
+
+/* ===== PRÊMIOS ===== */
+.premios-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px;
+}
+.premio-item{
+  text-align:center;padding:36px 24px;background:var(--white);
+  border:1px solid var(--border);border-radius:var(--radius-md);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.premio-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.premio-img{
+  max-height:90px;width:auto;margin:0 auto 20px;object-fit:contain;
+}
+.premio-name{font-size:13px;font-weight:600;color:var(--text-dark);line-height:1.4}
+
+/* ===== CTA FINAL ===== */
+.cta-section{
+  background:var(--navy-deep);padding:80px 24px;text-align:center;
+}
+.cta-inner{max-width:640px;margin:0 auto}
+.cta-title{
+  font-family:var(--font-heading);font-size:clamp(28px,4vw,40px);
+  font-weight:600;color:var(--white);margin-bottom:20px;line-height:1.2;
+}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-desc{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:36px;line-height:1.7}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--green);color:var(--white);
+  padding:18px 40px;border-radius:100px;
+  font-size:17px;font-weight:600;
+  transition:background-color 0.3s ease,transform 0.2s ease;
+  box-shadow:0 4px 24px rgba(37,211,102,0.3);
+}
+.cta-btn:hover{background:var(--green-hover);transform:translateY(-2px)}
+.cta-btn svg{width:22px;height:22px;fill:currentColor}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.06);
+  padding:32px 24px;text-align:center;
+}
+.footer-inner{max-width:var(--max-w);margin:0 auto}
+.footer-logo{height:40px;width:auto;margin:0 auto 16px;opacity:0.7}
+.footer-text{font-size:13px;color:rgba(255,255,255,0.4)}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float{
+  position:fixed;bottom:24px;right:24px;z-index:999;
+  width:60px;height:60px;background:var(--green);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.4);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
+.whatsapp-float svg{width:30px;height:30px;fill:var(--white)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;gap:40px}
+  .hero-content{order:1}
+  .hero-image{order:0;max-width:400px;margin:0 auto}
+  .hero-desc,.hero-benefits{max-width:100%}
+  .hero-benefits li{justify-content:center}
+  .hero-cta{margin:0 auto}
+  .diff-split{grid-template-columns:1fr}
+  .diff-split-image{min-height:300px}
+  .doctor-card,.doctor-card.reverse{grid-template-columns:1fr;direction:ltr;gap:32px}
+  .doctor-card.reverse > *{direction:ltr}
+  .doctor-photo{max-width:360px;margin:0 auto}
+  .clinica-showcase{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:1fr}
+  .media-card{grid-template-columns:1fr}
+  .media-thumb{min-height:220px}
+  .premios-grid{grid-template-columns:repeat(2,1fr)}
+  .unidades-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  .header-nav{
+    display:none;flex-direction:column;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--white);padding:24px;gap:16px;
+    border-bottom:1px solid var(--border);box-shadow:var(--shadow-md);
+  }
+  .header-nav.active{display:flex}
+  .header-cta{display:none}
+  .menu-toggle{display:block}
+  .hero{min-height:auto;padding-top:80px;padding-bottom:40px}
+  .hero-title{font-size:clamp(28px,6vw,40px)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .unidades-grid{grid-template-columns:repeat(2,1fr)}
+  .premios-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-band-inner{flex-direction:column;gap:20px}
+  .diff-split-content{padding:36px 24px}
+}
+@media(max-width:480px){
+  .section{padding:64px 16px}
+  .unidades-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#"><img src="logo-drudi.jpg" alt="Drudi e Almeida Clínicas Oftalmológicas" class="logo" width="160" height="52"></a>
+    <nav class="header-nav" id="nav">
+      <a href="#especialidades">Especialidades</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#clinicas">Clínicas</a>
+      <a href="#midia">Na Mídia</a>
+    </nav>
+    <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20o%20pre%C3%A7o%20da%20cirurgia%20de%20catarata." class="header-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.31-.726-5.993-1.957l-.418-.312-2.774.928.93-2.77-.324-.43A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      WhatsApp
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Referência em Oftalmologia em SP</div>
+      <h1 class="hero-title">Cirurgia de catarata com <em>especialistas renomados</em> e preços acessíveis em até 10x</h1>
+      <p class="hero-desc">Recupere a clareza da sua visão com quem entende. Mais de 10 anos de experiência, tecnologia de ponta e atendimento humanizado em 5 unidades em São Paulo.</p>
+      <ul class="hero-benefits">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Cirurgiões com mais de 10 anos de experiência</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Lentes premium multifocais e trifocais</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Parcelamento em até 10x sem juros</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>5 unidades em São Paulo</li>
+      </ul>
+      <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20o%20pre%C3%A7o%20da%20cirurgia%20de%20catarata." class="hero-cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        Receber Preço no WhatsApp
+      </a>
+    </div>
+    <div class="hero-image">
+      <img src="1000211005.webp" alt="Clínica Drudi e Almeida - Recepção moderna" width="540" height="405" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="section section-dark" id="especialidades">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Nossas Especialidades</span>
+      <h2 class="section-title">Cirurgias e tratamentos oftalmológicos</h2>
+      <p class="section-subtitle">Oferecemos as técnicas mais avançadas em oftalmologia, com tecnologia de ponta e lentes premium.</p>
+    </div>
+    <div class="specs-grid">
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg>Catarata</span>
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8m-4-4h8"/></svg>Refrativa</span>
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Retina</span>
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Glaucoma</span>
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/></svg>Ceratocone</span>
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="12" r="2"/><circle cx="15" cy="12" r="2"/><path d="M11 12h2"/></svg>Estrabismo</span>
+      <span class="spec-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>Plástica Ocular</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <span class="cta-band-text">Quer saber o preço da sua cirurgia?</span>
+    <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20o%20pre%C3%A7o%20da%20cirurgia." class="cta-band-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694
+.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      Receber no WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- DIFERENCIAIS (split layout: foto + conteúdo) -->
+<section class="section">
+  <div class="section-inner">
+    <div class="diff-split">
+      <div class="diff-split-image">
+        <img src="1000211011.webp" alt="Interior da clínica Drudi e Almeida" loading="lazy" width="600" height="500">
+      </div>
+      <div class="diff-split-content">
+        <span class="section-label">Por que nos escolher</span>
+        <h2 class="section-title">O que nos torna diferentes</h2>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><div class="diff-item-title">Especialistas Renomados</div><div class="diff-item-text">Cirurgiões com mais de uma década de experiência e presença frequente na mídia nacional, reconhecidos pela excelência em resultados.</div></div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="diff-item-title">5 Unidades em São Paulo</div><div class="diff-item-text">Lapa, Santana, Tatuapé, Guarulhos e São Miguel. Sempre perto de você, com a mesma qualidade em cada unidade.</div></div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          <div><div class="diff-item-title">Atendimento Humanizado</div><div class="diff-item-text">Do primeiro contato ao pós-operatório, cada paciente é único. Equipe acolhedora e dedicada ao seu bem-estar.</div></div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div><div class="diff-item-title">Lentes Premium</div><div class="diff-item-text">Lentes intraoculares de última geração — multifocais, trifocais e tóricas — para os melhores resultados visuais possíveis.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉDICOS -->
+<section class="doctor-section" id="sobre">
+  <div class="section-header" style="max-width:var(--max-w);margin:0 auto 64px">
+    <span class="section-label">Nossos Especialistas</span>
+    <h2 class="section-title">Conheça quem cuida da sua visão</h2>
+    <p class="section-subtitle">Profissionais com mais de 10 anos de experiência, reconhecidos pela excelência e pelo atendimento humanizado.</p>
+  </div>
+
+  <!-- Dr. Fernando Drudi -->
+  <div class="doctor-card">
+    <div class="doctor-photo">
+      <img src="b3a755d1-1b39-11f1-8e32-b3cca5f6fbf6.webp" alt="Dr. Fernando Drudi - Cirurgião Oftalmologista" width="400" height="533" loading="lazy">
+      <div class="doctor-photo-accent"></div>
+    </div>
+    <div class="doctor-info">
+      <h3 class="doctor-name">Dr. Fernando Drudi</h3>
+      <p class="doctor-role">Cirurgião Oftalmologista &mdash; CRM 000000</p>
+      <p class="doctor-text">Fundador da Drudi e Almeida Clínicas Oftalmológicas, o Dr. Fernando Drudi é especialista em cirurgias de catarata, retina e vítreo, com mais de uma década de experiência e milhares de procedimentos realizados. Formado pelas melhores instituições do país, é reconhecido pelo compromisso inabalável com a acessibilidade e a excelência no atendimento oftalmológico.</p>
+      <p class="doctor-text">À frente de 5 unidades em São Paulo, lidera uma equipe que combina tecnologia de ponta com um atendimento verdadeiramente humanizado. Sua visão empreendedora transformou a Drudi e Almeida em referência no setor, recebendo o Selo de Excelência em Franchising da ABF e a certificação Great Place to Work.</p>
+      <div class="doctor-divider"></div>
+      <p class="doctor-highlight">Condecorado como Amigo da Marinha pela SOAMAR Brasil por seu projeto humanitário de oftalmologia na Amazônia, levando cirurgias gratuitas e saúde ocular a comunidades ribeirinhas que não tinham acesso a atendimento especializado.</p>
+    </div>
+  </div>
+
+  <!-- Dra. Priscilla Almeida -->
+  <div class="doctor-card reverse">
+    <div class="doctor-photo">
+      <img src="b3a77ce0-1b39-11f1-8e32-b3cca5f6fbf6.webp" alt="Dra. Priscilla Almeida - Cirurgiã Oftalmologista" width="400" height="533" loading="lazy">
+      <div class="doctor-photo-accent"></div>
+    </div>
+    <div class="doctor-info">
+      <h3 class="doctor-name">Dra. Priscilla Almeida</h3>
+      <p class="doctor-role">Cirurgiã Oftalmologista &mdash; CRM 000000</p>
+      <p class="doctor-text">Cofundadora da Drudi e Almeida, a Dra. Priscilla Almeida é especialista em cirurgias refrativas, plástica ocular e estrabismo. Com técnica refinada e um olhar humanizado para cada paciente, é reconhecida como referência em empoderamento feminino na medicina oftalmológica.</p>
+      <p class="doctor-text">Presença frequente em grandes veículos de comunicação como o Programa Mulheres (Gazeta), Você Bonita (Gazeta) e o Programa Interioriza, onde compartilha conhecimento sobre saúde ocular e prevenção com milhões de telespectadores, democratizando o acesso à informação de qualidade.</p>
+      <div class="doctor-divider"></div>
+      <p class="doctor-highlight">Defensora da oftalmologia preventiva e do acesso universal à saúde ocular, a Dra. Priscilla atua ativamente em campanhas de conscientização e projetos sociais que levam atendimento especializado a populações carentes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section section-cream" id="depoimentos">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Depoimentos</span>
+      <h2 class="section-title">O que nossos pacientes dizem</h2>
+      <p class="section-subtitle">Histórias reais de transformação e recuperação da visão.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="testimonial-text">"Meu procedimento de catarata foi rápido e indolor. Já no dia seguinte enxergava perfeitamente. A equipe foi muito profissional e atenciosa do início ao fim. Recomendo de olhos fechados!"</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">MJ</div><div><div class="testimonial-name">Marina Júlia</div><div class="testimonial-procedure">Cirurgia de Catarata — Unidade Lapa</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="testimonial-text">"Minha mãe tinha muito medo da cirurgia, mas o Dr. Fernando explicou tudo com paciência e carinho. Hoje ela enxerga cores que não via há anos. Somos eternamente gratos à equipe."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">RC</div><div><div class="testimonial-name">Roberto Costa</div><div class="testimonial-procedure">Acompanhante — Unidade Santana</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="testimonial-text">"Fiz a cirurgia refrativa e finalmente consegui me livrar dos óculos. O resultado superou todas as minhas expectativas. Atendimento humanizado de verdade, do começo ao fim."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">AP</div><div><div class="testimonial-name">Ana Paula Mendes</div><div class="testimonial-procedure">Cirurgia Refrativa — Unidade Tatuapé</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLÍNICAS -->
+<section class="section" id="clinicas">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Nossas Unidades</span>
+      <h2 class="section-title">5 clínicas modernas em São Paulo</h2>
+      <p class="section-subtitle">Infraestrutura completa e ambiente acolhedor para o seu conforto.</p>
+    </div>
+    <div class="clinica-showcase">
+      <img src="1000211005.webp" alt="Interior da clínica Drudi e Almeida" class="clinica-img" loading="lazy" width="640" height="400">
+      <div class="clinica-info">
+        <h3>Ambiente projetado para o seu conforto</h3>
+        <p>Nossas clínicas foram projetadas com o mais alto padrão de qualidade, combinando tecnologia de ponta com um ambiente acolhedor. Cada detalhe foi pensado para que você se sinta seguro e confortável durante toda a sua jornada conosco.</p>
+        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20unidades." class="hero-cta" target="_blank" rel="noopener" style="font-size:14px;padding:12px 28px">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Agendar Consulta
+        </a>
+      </div>
+    </div>
+    <div class="unidades-grid">
+      <div class="unidade-card"><div class="unidade-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="unidade-name">Lapa</div><div class="unidade-city">São Paulo &mdash; Capital</div></div>
+      <div class="unidade-card"><div class="unidade-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="unidade-name">Santana</div><div class="unidade-city">São Paulo &mdash; Capital</div></div>
+      <div class="unidade-card"><div class="unidade-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="unidade-name">Tatuapé</div><div class="unidade-city">São Paulo &mdash; Capital</div></div>
+      <div class="unidade-card"><div class="unidade-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="unidade-name">Guarulhos</div><div class="unidade-city">Guarulhos &mdash; SP</div></div>
+      <div class="unidade-card"><div class="unidade-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="unidade-name">São Miguel</div><div class="unidade-city">São Paulo &mdash; Capital</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÍDIA -->
+<section class="section section-cream" id="midia">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Na Mídia</span>
+      <h2 class="section-title">Drudi e Almeida na imprensa</h2>
+      <p class="section-subtitle">Nossos especialistas são referência em grandes veículos de comunicação nacionais.</p>
+    </div>
+    <div class="media-grid">
+      <a href="https://m.youtube.com/watch?v=WQ9cAJB8FV0" target="_blank" rel="noopener" class="media-card">
+        <div class="media-thumb">
+          <img src="midia-ressoar-fernando.jpg" alt="Dr. Fernando Drudi no Instituto Ressoar - Record" loading="lazy" width="400" height="225">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
+          <div class="media-source">Instituto Ressoar &mdash; Record</div>
+          <h3 class="media-title">Dr. Fernando Drudi no Programa Ressoar</h3>
+          <p class="media-desc">O Dr. Fernando compartilha sua experiência como oftalmologista e o impacto do projeto humanitário que leva cirurgias gratuitas a comunidades da Amazônia.</p>
+        </div>
+      </a>
+      <a href="#" target="_blank" rel="noopener" class="media-card">
+        <div class="media-thumb">
+          <img src="midia-cnn.jpg" alt="Dr. Fernando Drudi na CNN Brasil - Correspondente Médico" loading="lazy" width="400" height="225">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
+          <div class="media-source">CNN Brasil &mdash; Correspondente Médico</div>
+          <h3 class="media-title">Dr. Fernando Drudi na CNN</h3>
+          <p class="media-desc">Participação ao vivo no quadro Correspondente Médico da CNN Brasil, abordando temas de saúde ocular e os avanços da oftalmologia moderna.</p>
+        </div>
+      </a>
+      <a href="https://www.tiktok.com/@dra.priscillalmeida/video/7112464428955602182" target="_blank" rel="noopener" class="media-card">
+        <div class="media-thumb">
+          <img src="midia-voce-bonita-1.jpg" alt="Dra. Priscilla Almeida no Programa Você Bonita - Gazeta" loading="lazy" width="400" height="225">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
+          <div class="media-source">Você Bonita &mdash; TV Gazeta</div>
+          <h3 class="media-title">Dra. Priscilla Almeida no Você Bonita</h3>
+          <p class="media-desc">A Dra. Priscilla fala sobre as principais causas e tratamentos para olho seco, orientando o público sobre prevenção e cuidados com a saúde ocular.</p>
+        </div>
+      </a>
+      <a href="https://m.youtube.com/watch?v=mQ1aQH2VbYk" target="_blank" rel="noopener" class="media-card">
+        <div class="media-thumb">
+          <img src="video_interioriza.webp" alt="Dra. Priscilla e Dr. Fernando no Programa Interioriza" loading="lazy" width="400" height="225">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
+          <div class="media-source">Programa Interioriza</div>
+          <h3 class="media-title">Dra. Priscilla e Dr. Fernando no Interioriza</h3>
+          <p class="media-desc">Juntos, os fundadores da Drudi e Almeida levam saúde ocular ao interior de São Paulo, realizando atendimentos e cirurgias em regiões com acesso limitado.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRÊMIOS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Reconhecimentos</span>
+      <h2 class="section-title">Prêmios e certificações</h2>
+      <p class="section-subtitle">Certificações que comprovam nosso compromisso com a excelência.</p>
+    </div>
+    <div class="premios-grid">
+      <div class="premio-item"><img src="sef2024.jpg" alt="Selo de Excelência em Franchising 2024 - ABF" class="premio-img" loading="lazy" width="120" height="90"><p class="premio-name">Excelência em Franchising 2024 — ABF</p></div>
+      <div class="premio-item"><img src="mceclip1.png" alt="Great Place to Work 2024" class="premio-img" loading="lazy" width="120" height="90"><p class="premio-name">Great Place to Work 2024</p></div>
+      <div class="premio-item"><img src="images-4.jpeg" alt="SOAMAR Brasil - Amigo da Marinha" class="premio-img" loading="lazy" width="120" height="90"><p class="premio-name">Amigo da Marinha — SOAMAR Brasil</p></div>
+      <div class="premio-item"><img src="1000249091.jpg" alt="Oftalmologia Humanitária - Projeto Amazônia" class="premio-img" loading="lazy" width="120" height="90"><p class="premio-name">Oftalmologia Humanitária — Projeto Amazônia</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Pronto para recuperar a <em>clareza da sua visão</em>?</h2>
+    <p class="cta-desc">Fale com nossa equipe pelo WhatsApp e receba o preço da sua cirurgia. Atendimento rápido e sem compromisso.</p>
+    <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20o%20pre%C3%A7o%20da%20cirurgia%20de%20catarata." class="cta-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.31-.726-5.993-1.957l-.418-.312-2.774.928.93-2.77-.324-.43A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Receber Preço no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <img src="logo-drudi.jpg" alt="Drudi e Almeida Clínicas Oftalmológicas" class="footer-logo" loading="lazy" width="140" height="45" style="filter:brightness(0) invert(1);opacity:0.5">
+    <p class="footer-text">&copy; 2025 Drudi e Almeida Clínicas Oftalmológicas. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20o%20pre%C3%A7o%20da%20cirurgia%20de%20catarata." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.31-.726-5.993-1.957l-.418-.312-2.774.928.93-2.77-.324-.43A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+</a>
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+const menuToggle=document.getElementById('menuToggle');
+const nav=document.getElementById('nav');
+menuToggle.addEventListener('click',()=>{nav.classList.toggle('active')});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'})}nav.classList.remove('active')});
+});
+</script>
+</body>
+</html>
