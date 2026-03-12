@@ -185,11 +185,15 @@ a{text-decoration:none;color:inherit}
 
 /* MÍDIA */
 .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.media-card{display:flex;gap:16px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:transform 0.3s,box-shadow 0.3s}
-.media-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.media-icon{width:48px;height:48px;min-width:48px;background:var(--gold-pale);border:1px solid rgba(201,169,97,0.15);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center}
-.media-icon svg{width:22px;height:22px;fill:var(--gold)}
-.media-source{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.media-card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+.media-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.media-thumb{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
+.media-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s}
+.media-card:hover .media-thumb img{transform:scale(1.04)}
+.media-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25)}
+.media-play svg{width:48px;height:48px;fill:white;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.5))}
+.media-body{padding:16px 20px 20px}
+.media-source{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
 .media-title{font-size:14px;font-weight:600;color:var(--text-dark);line-height:1.3;margin-bottom:4px}
 .media-desc{font-size:12px;line-height:1.6;color:var(--text-muted)}
 
@@ -423,38 +427,50 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       <h2 class="section-title">Referência em grandes veículos nacionais</h2>
     </div>
     <div class="media-grid">
-      <div class="media-card">
-        <div class="media-icon"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-        <div>
+      <a class="media-card" href="https://m.youtube.com/watch?v=WQ9cAJB8FV0" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <div class="media-thumb">
+          <img src="midia-ressoar.jpg" alt="Dr. Fernando Drudi no Programa Ressoar" loading="lazy" width="640" height="360">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
           <div class="media-source">Instituto Ressoar — Record</div>
           <div class="media-title">Dr. Fernando no Programa Ressoar</div>
           <div class="media-desc">Projeto humanitário de cirurgias gratuitas para comunidades da Amazônia.</div>
         </div>
-      </div>
-      <div class="media-card">
-        <div class="media-icon"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-        <div>
-          <div class="media-source">CNN Brasil</div>
-          <div class="media-title">Dr. Fernando na CNN — Correspondente Médico</div>
+      </a>
+      <a class="media-card" href="https://www.cnnbrasil.com.br" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <div class="media-thumb">
+          <img src="midia-cnn.jpg" alt="Dr. Fernando Drudi na CNN Brasil" loading="lazy" width="640" height="360">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
+          <div class="media-source">CNN Brasil — Correspondente Médico</div>
+          <div class="media-title">Dr. Fernando na CNN Brasil</div>
           <div class="media-desc">Participação ao vivo abordando avanços da oftalmologia moderna.</div>
         </div>
-      </div>
-      <div class="media-card">
-        <div class="media-icon"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-        <div>
+      </a>
+      <a class="media-card" href="https://www.tiktok.com/@dra.priscillalmeida/video/7112464428955602182" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <div class="media-thumb">
+          <img src="midia-voce-bonita-2.jpg" alt="Dra. Priscilla no Você Bonita TV Gazeta" loading="lazy" width="640" height="360">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
           <div class="media-source">Você Bonita — TV Gazeta</div>
           <div class="media-title">Dra. Priscilla no Você Bonita</div>
-          <div class="media-desc">Orientação sobre causas e tratamentos para olho seco.</div>
+          <div class="media-desc">Orientação sobre causas e tratamentos para olho seco e saúde ocular.</div>
         </div>
-      </div>
-      <div class="media-card">
-        <div class="media-icon"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-        <div>
+      </a>
+      <a class="media-card" href="https://m.youtube.com/watch?v=mQ1aQH2VbYk" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <div class="media-thumb">
+          <img src="midia-interioriza.jpg" alt="Dra. Priscilla e Dr. Fernando no Programa Interioriza" loading="lazy" width="640" height="360">
+          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
           <div class="media-source">Programa Interioriza</div>
           <div class="media-title">Dra. Priscilla e Dr. Fernando no Interioriza</div>
-          <div class="media-desc">Saúde ocular e cirurgias no interior de São Paulo.</div>
+          <div class="media-desc">Saúde ocular e cirurgias levadas ao interior de São Paulo.</div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
