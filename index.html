@@ -51,12 +51,11 @@ a{text-decoration:none;color:inherit}
   display:flex;align-items:center;justify-content:space-between;
   border-bottom:1px solid #e8e4dc;
 }
-.topbar-logo{height:32px;width:auto;flex-shrink:0}
+.topbar-logo{height:64px;width:auto;flex-shrink:0}
 .topbar-text{
   font-size:12px;color:var(--navy);font-weight:400;
   text-align:center;flex:1;padding:0 12px;line-height:1.4;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
-  overflow:hidden;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .topbar-text strong{color:var(--navy);font-weight:700}
 .topbar-sep{
@@ -275,8 +274,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .convenios-logos{gap:16px}
   .convenio-logo{height:28px}
   .topbar{padding:8px 16px;gap:10px}
-  .topbar-text{font-size:11px}
-  .topbar-logo{height:26px}
+  .topbar-text{font-size:11px;white-space:normal;-webkit-line-clamp:unset}
+  .topbar-logo{height:52px}
   .pill{font-size:12px;padding:5px 11px}
 }
 </style>
@@ -285,9 +284,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <img src="logo-drudi.jpg" alt="Drudi e Almeida" class="topbar-logo" width="100" height="32" loading="eager">
+  <img src="logo-drudi.jpg" alt="Drudi e Almeida" class="topbar-logo" width="200" height="64" loading="eager">
   <p class="topbar-text">
-    <strong>Somente em março</strong>
+    <strong>Somente em março:</strong>
     <span class="topbar-sep"></span>
     avaliação com especialista com preço reduzido
     <span class="topbar-sep"></span>
