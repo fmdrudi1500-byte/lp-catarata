@@ -48,18 +48,17 @@ a{text-decoration:none;color:inherit}
 .topbar{
   background:#ffffff;
   padding:9px 20px;
-  position:relative;
-  display:flex;align-items:center;
+  display:flex;align-items:center;gap:12px;
   border-bottom:1px solid #e8e4dc;
-  min-height:56px;
 }
-.topbar-logo{height:64px;width:auto;flex-shrink:0;position:relative;z-index:2}
+.topbar-logo{height:44px;max-width:120px;width:auto;flex-shrink:0;object-fit:contain}
 .topbar-text{
-  font-size:11.5px;color:var(--navy);font-weight:400;
+  flex:1;
+  font-size:11px;color:var(--navy);font-weight:400;
   text-align:center;line-height:1.5;
-  position:absolute;left:0;right:0;
-  padding:0 160px 0 160px;
-  pointer-events:none;
+  min-width:0;
+  overflow-wrap:break-word;
+  word-break:break-word;
 }
 .topbar-text strong{color:var(--navy);font-weight:700}
 .topbar-sep{
@@ -278,9 +277,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .section{padding:52px 20px}
   .convenios-logos{gap:16px}
   .convenio-logo{height:28px}
-  .topbar{padding:8px 16px;min-height:52px}
-  .topbar-text{font-size:10.5px;padding:0 130px}
-  .topbar-logo{height:52px}
+  .topbar{padding:6px 12px;gap:10px}
+  .topbar-text{font-size:10.5px}
+  .topbar-logo{height:44px}
   .pill{font-size:12px;padding:5px 11px}
 }
 </style>
@@ -289,9 +288,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <img src="logo-drudi.jpg" alt="Drudi e Almeida" class="topbar-logo" width="200" height="64" loading="eager">
+  <img src="logo-drudi.jpg" alt="Drudi e Almeida" class="topbar-logo" width="120" height="44" loading="eager">
   <p class="topbar-text">
-    Avaliação para cirurgia de catarata com preços reduzidos <strong>(vagas limitadas)</strong>
+    Avaliação para cirurgia de catarata<br>com preços reduzidos <strong>(vagas limitadas)</strong>
   </p>
   <div class="topbar-spacer"></div>
 </div>
