@@ -100,12 +100,13 @@ a{text-decoration:none;color:inherit}
 .hero-title em{font-style:italic;color:var(--gold)}
 .hero-desc{font-size:17px;line-height:1.75;color:rgba(255,255,255,0.85);margin-bottom:24px;max-width:540px}
 .hero-desc .destaque-10x{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:800;font-size:20px;padding:2px 10px;border-radius:6px;letter-spacing:0.5px;vertical-align:middle;margin-left:2px}
-.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hero-pills{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px;max-width:420px}
 .pill{
-  display:inline-flex;align-items:center;gap:6px;
+  display:flex;align-items:center;justify-content:center;gap:6px;
   background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
-  border-radius:100px;padding:6px 14px;
+  border-radius:100px;padding:8px 14px;
   font-size:13px;color:rgba(255,255,255,0.9);font-weight:600;
+  text-align:center;
 }
 .pill-check{color:var(--gold);font-size:14px}
 
@@ -304,7 +305,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       <span class="pill"><span class="pill-check">✓</span> Pacote Cirúrgico</span>
       <span class="pill"><span class="pill-check">✓</span> Aceita convênios</span>
       <span class="pill"><span class="pill-check">✓</span> Lentes premium</span>
-      <span class="pill" style="background:var(--gold);color:var(--navy-deep);font-weight:800;border-color:var(--gold)"><span class="pill-check" style="color:var(--navy-deep)">✓</span> Até <strong>10x</strong> sem juros</span>
+      <span class="pill" style="grid-column:1/-1;background:var(--gold);color:var(--navy-deep);font-weight:800;border-color:var(--gold)"><span class="pill-check" style="color:var(--navy-deep)">✓</span> Até <strong>10x</strong> sem juros</span>
     </div>
     <select class="hero-select" id="unitSelect" onchange="updateWaLinks()">
       <option value="">📍 Selecione a unidade mais próxima</option>
