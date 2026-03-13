@@ -140,9 +140,13 @@ a{text-decoration:none;color:inherit}
   transition:background 0.3s;
 }
 .hero-tel:hover{background:rgba(255,255,255,0.08)}
-.hero-trust{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;color:rgba(255,255,255,0.65)}
-.hero-trust strong{color:rgba(255,255,255,0.95)}
-.hero-stars{color:var(--gold);letter-spacing:1px}
+.hero-trust{margin-top:16px}
+.google-card{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:11px 16px;box-shadow:0 4px 24px rgba(0,0,0,0.22);max-width:320px}
+.google-card-info{flex:1}
+.google-card-stars{color:#FBBC04;font-size:17px;letter-spacing:1px;line-height:1;margin-bottom:2px}
+.google-card-count{font-size:12px;font-weight:700;color:#1a2a3a}
+.google-card-sub{font-size:11px;color:#666;margin-top:1px}
+.google-card-score{font-size:24px;font-weight:800;color:#1a2a3a;line-height:1}
 
 /* SECTIONS */
 .section{padding:72px 24px}
@@ -327,8 +331,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       </a>
     </div>
     <div class="hero-trust">
-      <span class="hero-stars">★★★★★</span>
-      <span><strong>847 avaliações</strong> no Google · Nota 4.9</span>
+      <div class="google-card">
+        <svg width="54" height="18" viewBox="0 0 272 92" xmlns="http://www.w3.org/2000/svg" aria-label="Google"><path fill="#4285F4" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/><path fill="#EA4335" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/><path fill="#FBBC05" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"/><path fill="#4285F4" d="M225 3v65h-9.5V3h9.5z"/><path fill="#34A853" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"/><path fill="#EA4335" d="M35.29 41.41V32h31.tattoo c.52 5.79.84 12.77.84 20.26 0 19.66-10.84 33.27-27.22 33.27C21.67 85.53 8 71.86 8 53.5S21.67 21.47 40.71 21.47c9.66 0 16.38 3.78 21.5 8.65l-6.05 6.05c-3.61-3.36-8.56-5.96-15.45-5.96-12.6 0-22.43 10.16-22.43 22.76 0 12.6 9.83 22.76 22.43 22.76 8.15 0 12.77-3.27 15.79-6.29 2.44-2.44 4.04-5.96 4.62-10.75H40.71v-9.41h30.88c.34 1.68.5 3.61.5 5.63z"/></svg>
+        <div class="google-card-info">
+          <div class="google-card-stars">★★★★★</div>
+          <div class="google-card-count">847 avaliações</div>
+          <div class="google-card-sub">Google · Nota 4.9</div>
+        </div>
+        <div class="google-card-score">4.9</div>
+      </div>
     </div>
   </div>
 </section>
