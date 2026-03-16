@@ -336,6 +336,22 @@ a{text-decoration:none;color:inherit}
 /* FOCUS */
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
 
+/* ANIMAÇÕES DE ENTRADA */
+.fade-in-up{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity 0.55s ease,transform 0.55s ease;
+}
+.fade-in-up.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.fade-in-up.delay-1{transition-delay:0.1s}
+.fade-in-up.delay-2{transition-delay:0.2s}
+.fade-in-up.delay-3{transition-delay:0.3s}
+.fade-in-up.delay-4{transition-delay:0.4s}
+.fade-in-up.delay-5{transition-delay:0.5s}
+
 /* SEÇÃO PREÇO/PACOTE */
 .preco-section{
   background:linear-gradient(135deg,var(--navy-deep) 0%,#1a2a40 100%);
@@ -364,7 +380,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
   padding:4px 10px;border-radius:20px;
 }
-.preco-card-icon{font-size:28px;margin-bottom:16px}
+.preco-card-icon{display:none}
 .preco-card-name{font-family:var(--font-heading);font-size:22px;color:#fff;margin-bottom:6px}
 .preco-card-desc{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:20px;line-height:1.6}
 .preco-card-valor{
@@ -605,17 +621,88 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     <p class="convenios-cta">Não encontrou seu convênio? <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+gostaria+de+saber+se+voc%C3%AAs+aceitam+meu+conv%C3%AAnio." class="js-wa" target="_blank" rel="noopener">Consulte pelo WhatsApp</a></p>
   </div>
 </section>
+<!-- PREÇO / PACOTE -->
+<section class="preco-section">
+  <div class="preco-inner">
+    <div class="preco-header fade-in-up">
+      <span class="preco-label">Investimento</span>
+      <h2 class="preco-title">Transparência no preço, excelência no cuidado</h2>
+      <p class="preco-subtitle">Pacotes completos com tudo incluso. Sem surpresas na hora da cirurgia.</p>
+    </div>
+    <div class="preco-grid">
+      <!-- Card 1: Lente Monofocal -->
+      <div class="preco-card fade-in-up delay-1">
+        <div class="preco-card-name">Pacote Monofocal</div>
+        <div class="preco-card-desc">Ideal para quem busca excelente qualidade visual para longe, podendo usar óculos para perto.</div>
+        <div class="preco-card-valor"><span>a partir de </span>R$&nbsp;2.800</div>
+        <div class="preco-card-parcela">por olho &mdash; ou até 10x sem juros</div>
+        <ul class="preco-card-itens">
+          <li>Consulta pré-operatória completa</li>
+          <li>Exames biométricos incluso</li>
+          <li>Lente monofocal importada</li>
+          <li>Cirurgia com anestesia local e sedação</li>
+          <li>Retorno pós-operatório</li>
+        </ul>
+        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+tenho+interesse+no+Pacote+Monofocal+de+catarata.+Podem+me+passar+mais+informa%C3%A7%C3%B5es%3F" class="preco-card-cta js-wa" target="_blank" rel="noopener"
+           onclick="gtag('event','conversion',{'send_to':'AW-7657239771','event_category':'CTA','event_label':'preco_monofocal'})">
+          Consultar disponibilidade
+        </a>
+      </div>
+      <!-- Card 2: Lente Premium (destaque) -->
+      <div class="preco-card destaque fade-in-up delay-2">
+        <div class="preco-card-badge">Mais escolhido</div>
+        <div class="preco-card-name">Pacote Premium</div>
+        <div class="preco-card-desc">Lente multifocal ou trifocal: liberdade de enxergar de perto, intermédio e longe sem óculos.</div>
+        <div class="preco-card-valor"><span>a partir de </span>R$&nbsp;5.500</div>
+        <div class="preco-card-parcela">por olho &mdash; ou até 10x sem juros</div>
+        <ul class="preco-card-itens">
+          <li>Consulta pré-operatória completa</li>
+          <li>Exames biométricos incluso</li>
+          <li>Lente multifocal ou trifocal premium</li>
+          <li>Cirurgia com anestesia local e sedação</li>
+          <li>Retorno pós-operatório</li>
+          <li>Redução máxima de dependência de óculos</li>
+        </ul>
+        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+tenho+interesse+no+Pacote+Premium+de+catarata+com+lente+multifocal.+Podem+me+passar+mais+informa%C3%A7%C3%B5es%3F" class="preco-card-cta js-wa" target="_blank" rel="noopener"
+           onclick="gtag('event','conversion',{'send_to':'AW-7657239771','event_category':'CTA','event_label':'preco_premium'})">
+          Quero o Pacote Premium
+        </a>
+      </div>
+      <!-- Card 3: Convênio -->
+      <div class="preco-card fade-in-up delay-3">
+        <div class="preco-card-name">Pelo Convênio</div>
+        <div class="preco-card-desc">Aceitamos os principais planos de saúde. Consulte a cobertura do seu convênio sem compromisso.</div>
+        <div class="preco-card-valor" style="font-size:26px">Consulte</div>
+        <div class="preco-card-parcela">cobertura do seu plano</div>
+        <ul class="preco-card-itens">
+          <li>Bradesco Saúde</li>
+          <li>Amil</li>
+          <li>Unimed</li>
+          <li>Prevent Senior</li>
+          <li>Mediservice e outros</li>
+        </ul>
+        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+gostaria+de+saber+se+voc%C3%AAs+aceitam+meu+conv%C3%AAnio+para+cirurgia+de+catarata." class="preco-card-cta js-wa" target="_blank" rel="noopener"
+           onclick="gtag('event','conversion',{'send_to':'AW-7657239771','event_category':'CTA','event_label':'preco_convenio'})">
+          Verificar meu convênio
+        </a>
+      </div>
+    </div>
+    <p class="preco-aviso">* Preços estimados por olho. O valor exato depende da avaliação pré-operatória e do tipo de lente indicado. <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+gostaria+de+receber+um+or%C3%A7amento+para+cirurgia+de+catarata." class="js-wa" target="_blank" rel="noopener">Solicite um orçamento personalizado.</a></p>
+  </div>
+</section>
+
+
 
 <!-- MÉDICOS -->
 <section class="section">
   <div class="section-inner">
-    <div class="section-header">
+    <div class="section-header fade-in-up">
       <span class="section-label">Nossos Especialistas</span>
       <h2 class="section-title">Conheça quem cuida da sua visão</h2>
       <p class="section-subtitle">Profissionais com mais de 10 anos de experiência e presença em grandes veículos de mídia nacional.</p>
     </div>
     <div class="doctors-grid">
-      <div class="doctor-card">
+      <div class="doctor-card fade-in-up delay-1">
         <img src="dr-fernando-400w.webp" srcset="dr-fernando-200w.webp 200w, dr-fernando-400w.webp 400w" sizes="(max-width:600px) 200px, 400px" alt="Dr. Fernando Macei Drudi — Cirurgião Oftalmologista" loading="lazy" decoding="async" width="400" height="583">
         <div class="doctor-body">
           <h3 class="doctor-name">Dr. Fernando Macei Drudi</h3>
@@ -624,7 +711,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <p class="doctor-highlight">Condecorado "Amigo da Marinha" (SOAMAR Brasil) pelo projeto humanitário que leva cirurgias gratuitas a comunidades ribeirinhas da Amazônia.</p>
         </div>
       </div>
-      <div class="doctor-card">
+      <div class="doctor-card fade-in-up delay-2">
         <img src="dra-priscilla-400w.webp" srcset="dra-priscilla-200w.webp 200w, dra-priscilla-400w.webp 400w" sizes="(max-width:600px) 200px, 400px" alt="Dra. Priscilla R. de Almeida — Oftalmologista" loading="lazy" decoding="async" width="400" height="583">
         <div class="doctor-body">
           <h3 class="doctor-name">Dra. Priscilla R. de Almeida</h3>
@@ -640,7 +727,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 <!-- DEPOIMENTOS -->
 <section class="section section-cream">
   <div class="section-inner">
-    <div class="section-header">
+    <div class="section-header fade-in-up">
       <span class="section-label">Depoimentos Verificados</span>
       <h2 class="section-title">O que nossos pacientes dizem</h2>
     </div>
@@ -688,7 +775,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 <!-- MÍDIA — versão compacta -->
 <section class="section">
   <div class="section-inner">
-    <div class="section-header">
+    <div class="section-header fade-in-up">
       <span class="section-label">Na Mídia</span>
       <h2 class="section-title">Referência em grandes veículos nacionais</h2>
     </div>
@@ -745,83 +832,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   </div>
 </section>
 
-<!-- PREÇO / PACOTE -->
-<section class="preco-section">
-  <div class="preco-inner">
-    <div class="preco-header">
-      <span class="preco-label">Investimento</span>
-      <h2 class="preco-title">Transparência no preço, excelência no cuidado</h2>
-      <p class="preco-subtitle">Pacotes completos com tudo incluso. Sem surpresas na hora da cirurgia.</p>
-    </div>
-    <div class="preco-grid">
-      <!-- Card 1: Lente Monofocal -->
-      <div class="preco-card">
-        <div class="preco-card-icon">👁️</div>
-        <div class="preco-card-name">Pacote Monofocal</div>
-        <div class="preco-card-desc">Ideal para quem busca excelente qualidade visual para longe, podendo usar óculos para perto.</div>
-        <div class="preco-card-valor"><span>a partir de </span>R$&nbsp;2.800</div>
-        <div class="preco-card-parcela">por olho &mdash; ou até 10x sem juros</div>
-        <ul class="preco-card-itens">
-          <li>Consulta pré-operatória completa</li>
-          <li>Exames biométricos incluso</li>
-          <li>Lente monofocal importada</li>
-          <li>Cirurgia com anestesia local</li>
-          <li>Retorno pós-operatório</li>
-        </ul>
-        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+tenho+interesse+no+Pacote+Monofocal+de+catarata.+Podem+me+passar+mais+informa%C3%A7%C3%B5es%3F" class="preco-card-cta js-wa" target="_blank" rel="noopener"
-           onclick="gtag('event','conversion',{'send_to':'AW-7657239771','event_category':'CTA','event_label':'preco_monofocal'})">
-          Consultar disponibilidade
-        </a>
-      </div>
-      <!-- Card 2: Lente Premium (destaque) -->
-      <div class="preco-card destaque">
-        <div class="preco-card-badge">Mais escolhido</div>
-        <div class="preco-card-icon">✨</div>
-        <div class="preco-card-name">Pacote Premium</div>
-        <div class="preco-card-desc">Lente multifocal ou trifocal: liberdade de enxergar de perto, intermédio e longe sem óculos.</div>
-        <div class="preco-card-valor"><span>a partir de </span>R$&nbsp;5.500</div>
-        <div class="preco-card-parcela">por olho &mdash; ou até 10x sem juros</div>
-        <ul class="preco-card-itens">
-          <li>Consulta pré-operatória completa</li>
-          <li>Exames biométricos incluso</li>
-          <li>Lente multifocal ou trifocal premium</li>
-          <li>Cirurgia com anestesia local</li>
-          <li>Retorno pós-operatório</li>
-          <li>Redução máxima de dependência de óculos</li>
-        </ul>
-        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+tenho+interesse+no+Pacote+Premium+de+catarata+com+lente+multifocal.+Podem+me+passar+mais+informa%C3%A7%C3%B5es%3F" class="preco-card-cta js-wa" target="_blank" rel="noopener"
-           onclick="gtag('event','conversion',{'send_to':'AW-7657239771','event_category':'CTA','event_label':'preco_premium'})">
-          Quero o Pacote Premium
-        </a>
-      </div>
-      <!-- Card 3: Convênio -->
-      <div class="preco-card">
-        <div class="preco-card-icon">🏥</div>
-        <div class="preco-card-name">Pelo Convênio</div>
-        <div class="preco-card-desc">Aceitamos os principais planos de saúde. Consulte a cobertura do seu convênio sem compromisso.</div>
-        <div class="preco-card-valor" style="font-size:26px">Consulte</div>
-        <div class="preco-card-parcela">cobertura do seu plano</div>
-        <ul class="preco-card-itens">
-          <li>Bradesco Saúde</li>
-          <li>Amil</li>
-          <li>Unimed</li>
-          <li>Prevent Senior</li>
-          <li>Mediservice e outros</li>
-        </ul>
-        <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+gostaria+de+saber+se+voc%C3%AAs+aceitam+meu+conv%C3%AAnio+para+cirurgia+de+catarata." class="preco-card-cta js-wa" target="_blank" rel="noopener"
-           onclick="gtag('event','conversion',{'send_to':'AW-7657239771','event_category':'CTA','event_label':'preco_convenio'})">
-          Verificar meu convênio
-        </a>
-      </div>
-    </div>
-    <p class="preco-aviso">* Preços estimados por olho. O valor exato depende da avaliação pré-operatória e do tipo de lente indicado. <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+gostaria+de+receber+um+or%C3%A7amento+para+cirurgia+de+catarata." class="js-wa" target="_blank" rel="noopener">Solicite um orçamento personalizado.</a></p>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="faq-section">
   <div class="faq-inner">
-    <div class="faq-header section-header">
+    <div class="faq-header section-header fade-in-up">
       <span class="section-label">Dúvidas Frequentes</span>
       <h2 class="section-title">Perguntas que nossos pacientes fazem</h2>
       <p class="section-subtitle">Tire suas dúvidas antes de entrar em contato. Se não encontrar o que procura, fale com nossa equipe.</p>
@@ -1048,6 +1063,26 @@ function toggleFaq(btn){
     btn.setAttribute('aria-expanded','true');
   }
 }
+
+// IntersectionObserver para animações de entrada
+(function(){
+  if(!('IntersectionObserver' in window)){
+    // Fallback: mostrar tudo imediatamente em browsers antigos
+    document.querySelectorAll('.fade-in-up').forEach(function(el){el.classList.add('visible');});
+    return;
+  }
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-in-up').forEach(function(el){
+    observer.observe(el);
+  });
+})();
 
 // UTM dinâmico: ler parâmetros da URL e repassar nos links do WhatsApp
 (function(){
