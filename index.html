@@ -6,21 +6,53 @@
 <title>Cirurgia de Catarata em SP | Drudi e Almeida Clínicas Oftalmológicas</title>
 <meta name="description" content="Cirurgia de catarata com especialistas renomados em até 10x. 5 unidades em São Paulo. Receba o preço no WhatsApp.">
 <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://lp.institutodrudiealmeida.com.br/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lp.institutodrudiealmeida.com.br/">
+<meta property="og:title" content="Cirurgia de Catarata em SP | Drudi e Almeida">
+<meta property="og:description" content="Pacote cirúrgico com exames e lente importada. Especialistas renomados, parcelamento em até 10x sem juros. 5 unidades em SP.">
+<meta property="og:image" content="https://lp.institutodrudiealmeida.com.br/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://institutodrudiealmeida.com.br">
 <link rel="preload" as="image" href="van-gogh-hero-900w.webp" fetchpriority="high" imagesrcset="van-gogh-hero-600w.webp 600w, van-gogh-hero-900w.webp 900w" imagesizes="100vw">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-<!-- GA4 + Google Ads — single script, deferred until first user interaction -->
+<!-- GA4 + Google Ads — deferred until first user interaction, page_view sent after script loads -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;
-gtag('js',new Date());gtag('config','G-1Y6Z77ZK6M',{send_page_view:true});gtag('config','AW-7657239771');
+gtag('js',new Date());
 var _gaLoaded=false;
-function loadGA(){if(_gaLoaded)return;_gaLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-1Y6Z77ZK6M';document.head.appendChild(s)}
+function loadGA(){
+  if(_gaLoaded)return;_gaLoaded=true;
+  var s=document.createElement('script');s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-1Y6Z77ZK6M';
+  s.onload=function(){
+    gtag('config','G-1Y6Z77ZK6M',{send_page_view:true});
+    gtag('config','AW-7657239771');
+  };
+  document.head.appendChild(s);
+}
 ['click','scroll','touchstart','keydown'].forEach(function(e){document.addEventListener(e,loadGA,{once:true,passive:true})});
-setTimeout(loadGA,8000);
+setTimeout(loadGA,5000);
+// Scroll depth tracking
+var _scrollMarks={25:false,50:false,75:false,100:false};
+function trackScroll(){
+  var pct=Math.round((window.scrollY+window.innerHeight)/document.body.scrollHeight*100);
+  [25,50,75,100].forEach(function(m){
+    if(pct>=m&&!_scrollMarks[m]){
+      _scrollMarks[m]=true;
+      if(typeof gtag==='function')gtag('event','scroll_depth',{event_category:'Engagement',event_label:m+'%',value:m});
+    }
+  });
+}
+window.addEventListener('scroll',trackScroll,{passive:true});
 </script>
 
 <script type="application/ld+json">
@@ -82,12 +114,31 @@ a{text-decoration:none;color:inherit}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
 .hero-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(135deg, rgba(30,42,58,0.92) 0%, rgba(30,42,58,0.7) 50%, rgba(30,42,58,0.5) 100%);
+  background:linear-gradient(105deg, rgba(20,30,43,0.97) 0%, rgba(20,30,43,0.92) 45%, rgba(20,30,43,0.55) 70%, rgba(20,30,43,0.2) 100%);
 }
 .hero-inner{
   position:relative;z-index:2;
-  max-width:720px;margin:0 auto;
-  padding:48px 24px 56px;
+  max-width:var(--max-w);margin:0 auto;
+  padding:56px 24px 64px;
+  display:grid;
+  grid-template-columns:1fr;
+}
+@media(min-width:900px){
+  .hero-inner{
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+    padding:72px 40px;
+  }
+  .hero-content{max-width:540px}
+  .hero-right{
+    display:flex;flex-direction:column;align-items:flex-end;gap:20px;
+  }
+  .hero-pills{max-width:100%}
+  .hero-select{max-width:100%}
+}
+@media(max-width:899px){
+  .hero-right{display:none}
 }
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -170,7 +221,7 @@ a{text-decoration:none;color:inherit}
 .convenios-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
 .convenios-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
 .convenios-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px;margin-bottom:10px}
-.convenio-logo{height:34px;width:auto;opacity:0.7;filter:grayscale(20%);transition:opacity 0.3s,filter 0.3s}
+.convenio-logo{height:34px;width:auto;max-width:100px;object-fit:contain;opacity:0.7;filter:grayscale(20%);transition:opacity 0.3s,filter 0.3s}
 .convenio-logo:hover{opacity:1;filter:grayscale(0)}
 .convenios-cta{font-size:13px;color:var(--text-muted)}
 .convenios-cta a{color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:2px}
@@ -213,9 +264,12 @@ a{text-decoration:none;color:inherit}
 .media-desc{font-size:12px;line-height:1.6;color:var(--text-muted)}
 
 /* CTA FINAL */
-.cta-section{background:var(--navy-deep);padding:72px 24px;text-align:center}
-.cta-inner{max-width:600px;margin:0 auto}
-.cta-title{font-family:var(--font-heading);font-size:clamp(26px,4vw,38px);font-weight:600;color:var(--white);margin-bottom:16px;line-height:1.2}
+.cta-section{background:var(--navy-deep);padding:72px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(201,169,97,0.08) 0%, transparent 70%);pointer-events:none}
+.cta-inner{max-width:640px;margin:0 auto;position:relative;z-index:1}
+.cta-urgency{display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,97,0.12);border:1px solid rgba(201,169,97,0.3);border-radius:100px;padding:7px 18px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:0.5px;margin-bottom:20px;text-transform:uppercase}
+.cta-urgency::before{content:'';width:7px;height:7px;background:var(--gold);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+.cta-title{font-family:var(--font-heading);font-size:clamp(26px,4vw,42px);font-weight:600;color:var(--white);margin-bottom:16px;line-height:1.2}
 .cta-title em{font-style:italic;color:var(--gold)}
 .cta-desc{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:32px;line-height:1.7}
 .cta-btn{
@@ -229,11 +283,19 @@ a{text-decoration:none;color:inherit}
 .cta-btn:hover{background:var(--green-hover);transform:translateY(-2px)}
 .cta-btn svg{width:22px;height:22px;fill:currentColor}
 .cta-guarantee{margin-top:20px;font-size:12px;color:rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;gap:6px}
+.cta-vagas{margin-top:24px;padding:14px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;font-size:13px;color:rgba(255,255,255,0.5)}
+.cta-vagas strong{color:var(--gold)}
 
 /* FOOTER */
-.footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.06);padding:24px;text-align:center}
-.footer-text{font-size:11px;color:rgba(255,255,255,0.35);line-height:1.7}
-.footer-text a{color:rgba(255,255,255,0.5);text-decoration:underline}
+.footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.06);padding:40px 24px 28px;text-align:center}
+.footer-units{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;margin-bottom:24px}
+.footer-unit{font-size:12px;color:rgba(255,255,255,0.5);display:flex;flex-direction:column;align-items:center;gap:2px}
+.footer-unit strong{color:rgba(255,255,255,0.75);font-size:12px;font-weight:600}
+.footer-unit a{color:rgba(201,169,97,0.7);font-size:11px;text-decoration:none}
+.footer-unit a:hover{color:var(--gold)}
+.footer-divider{width:40px;height:1px;background:rgba(255,255,255,0.08);margin:0 auto 20px}
+.footer-text{font-size:11px;color:rgba(255,255,255,0.3);line-height:1.7}
+.footer-text a{color:rgba(255,255,255,0.45);text-decoration:underline}
 
 /* STICKY BAR */
 .sticky-bar{
@@ -271,6 +333,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .media-grid{grid-template-columns:1fr}
   .media-card{flex-direction:column;text-align:center}
   .media-icon{margin:0 auto}
+  .footer-units{gap:10px 16px}
 }
 @media(max-width:768px){
   .hero-title{font-size:clamp(46px,12vw,64px)}
@@ -304,6 +367,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
+    <div class="hero-content">
     <div class="hero-badge">Instituto da Catarata — Drudi e Almeida</div>
     <h1 class="hero-title">Volte a enxergar com <em>nitidez e cores vivas</em></h1>
     <p class="hero-desc">Pacote cirúrgico com exames e lente importada. Especialistas renomados, tecnologia de ponta e parcelamento em até <span class="destaque-10x">10x</span> sem juros.</p>
@@ -314,13 +378,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       <span class="pill"><span class="pill-check">✓</span> Lentes premium</span>
       <span class="pill" style="grid-column:1/-1;background:var(--gold);color:var(--navy-deep);font-weight:800;border-color:var(--gold)"><span class="pill-check" style="color:var(--navy-deep)">✓</span> Até <strong>10x</strong> sem juros</span>
     </div>
-    <select class="hero-select" id="unitSelect" onchange="updateWaLinks()">
+    <select class="hero-select" id="unitSelect" aria-label="Selecione a unidade mais próxima" onchange="updateWaLinks()">
       <option value="">Selecione a unidade mais próxima</option>
       <option value="Guarulhos Centro">Guarulhos Centro</option>
       <option value="Lapa">Lapa — São Paulo</option>
       <option value="Santana">Santana — São Paulo</option>
       <option value="São Miguel">São Miguel — São Paulo</option>
-      <option value="Tatuapé">Tatuapé — São Paulo</option>
+      <option value="Tatuaé">Tatuaé — São Paulo</option>
     </select>
     <div class="hero-cta-group">
       <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+vim+pela+p%C3%A1gina+de+catarata+e+gostaria+de+receber+o+pre%C3%A7o+da+cirurgia." class="hero-cta js-wa" target="_blank" rel="noopener"
@@ -344,6 +408,32 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
         <div class="google-card-score">4.9</div>
       </div>
     </div>
+    </div><!-- /hero-content -->
+    <div class="hero-right" aria-hidden="true">
+      <!-- Coluna direita desktop: card de depoimento em destaque -->
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:28px;max-width:380px;width:100%;backdrop-filter:blur(8px)">
+        <div style="color:#FBBC04;font-size:18px;letter-spacing:2px;margin-bottom:12px">★★★★★</div>
+        <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,0.88);font-style:italic;margin-bottom:20px">&ldquo;Fiz a cirurgia de catarata com o Dr. Fernando e no dia seguinte já estava enxergando com nitidez. Equipe incrível, muito profissional e acolhedora!&rdquo;</p>
+        <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
+          <div style="width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0">MR</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.9)">Maria Regina S.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.5)">Cirurgia de Catarata — Guarulhos</div>
+            <div style="font-size:10px;color:var(--gold);font-weight:600;margin-top:2px">✓ Verificado no Google</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px 24px;max-width:380px;width:100%">
+        <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px">5 Unidades em SP</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px">
+          <span style="font-size:13px;color:rgba(255,255,255,0.7)">&#x2022; Guarulhos</span>
+          <span style="font-size:13px;color:rgba(255,255,255,0.7)">&#x2022; Santana</span>
+          <span style="font-size:13px;color:rgba(255,255,255,0.7)">&#x2022; Tatuapé</span>
+          <span style="font-size:13px;color:rgba(255,255,255,0.7)">&#x2022; Lapa</span>
+          <span style="font-size:13px;color:rgba(255,255,255,0.7)">&#x2022; São Miguel</span>
+        </div>
+      </div>
+    </div><!-- /hero-right -->
   </div>
 </section>
 
@@ -502,6 +592,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 <!-- CTA FINAL -->
 <section class="cta-section">
   <div class="cta-inner">
+    <div class="cta-urgency">Vagas limitadas esta semana</div>
     <h2 class="cta-title">Pronto para recuperar a <em>clareza da sua visão</em>?</h2>
     <p class="cta-desc">Fale com nossa equipe pelo WhatsApp e receba o preço da cirurgia, informações sobre convênios e disponibilidade — sem compromisso.</p>
     <a href="https://wa.me/5511916544653?text=Ol%C3%A1%2C+vim+pela+p%C3%A1gina+de+catarata+e+gostaria+de+receber+o+pre%C3%A7o+da+cirurgia." class="cta-btn js-wa" target="_blank" rel="noopener"
@@ -510,16 +601,45 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       Receber Preço no WhatsApp
     </a>
     <p class="cta-guarantee">🛡️ Sem compromisso · Resposta em até 2h · Atendimento humanizado</p>
+    <div class="cta-vagas">Nossa equipe atende de seg. a sáb. das 8h às 18h. <strong>Agende agora e garanta sua avaliação.</strong></div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
+  <div class="footer-units">
+    <div class="footer-unit">
+      <strong>Guarulhos</strong>
+      <span>R. Sete de Setembro, 1090 — Centro</span>
+      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Guarulhos" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+    <div class="footer-unit">
+      <strong>Santana</strong>
+      <span>Av. Engenheiro Caetano Álvares, 600</span>
+      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Santana+SP" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+    <div class="footer-unit">
+      <strong>Tatuaé</strong>
+      <span>R. Frei Caneca, 1 — Tatuaé</span>
+      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Tatua%C3%A9+SP" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+    <div class="footer-unit">
+      <strong>Lapa</strong>
+      <span>Av. Brigadeiro Luiz Antônio, 2050</span>
+      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Lapa+SP" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+    <div class="footer-unit">
+      <strong>São Miguel</strong>
+      <span>Av. Marechal Tito, 3000</span>
+      <a href="https://maps.google.com/?q=Drudi+e+Almeida+S%C3%A3o+Miguel+SP" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
   <p class="footer-text">
-    © 2026 Drudi e Almeida Clínicas Oftalmológicas — Drudi e Almeida Participações Ltda.<br>
-    5 unidades: Santana · Tatuapé · Lapa · São Miguel · Guarulhos<br>
+    © 2026 Drudi e Almeida Clínicas Oftalmológicas — Drudi e Almeida Participações Ltda. · CNPJ 40.106.607/0001-75<br>
     Dr. Fernando M. Drudi — CRM-SP 139.300 · Dra. Priscilla R. de Almeida — CRM-SP 148.173 | RQE 59.216<br>
     <a href="https://institutodrudiealmeida.com.br/instituto/catarata">Ver página completa do Instituto da Catarata</a>
+    · <a href="https://institutodrudiealmeida.com.br/politica-de-privacidade">Política de Privacidade</a>
   </p>
 </footer>
 
