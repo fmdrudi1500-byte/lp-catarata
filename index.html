@@ -67,7 +67,7 @@ window.addEventListener('scroll',trackScroll,{passive:true});
   {"@type":"Question","name":"Quanto tempo leva a recuperação?","acceptedAnswer":{"@type":"Answer","text":"A maioria dos pacientes já enxerga com muito mais nitidez no dia seguinte à cirurgia. A recuperação completa leva de 4 a 6 semanas."}},
   {"@type":"Question","name":"Preciso de acompanhante no dia da cirurgia?","acceptedAnswer":{"@type":"Answer","text":"Sim, é obrigatório ter um acompanhante adulto no dia da cirurgia para levar o paciente de volta para casa."}},
   {"@type":"Question","name":"Meu convênio cobre a cirurgia de catarata?","acceptedAnswer":{"@type":"Answer","text":"A maioria dos planos de saúde cobre a cirurgia de catarata quando há indicação médica. Aceitamos Bradesco Saúde, Amil, Unimed, Prevent Senior, Mediservice, Pró-PM, Ameplam e outros."}},
-  {"@type":"Question","name":"Qual a diferença entre lente monofocal e multifocal?","acceptedAnswer":{"@type":"Answer","text":"A lente monofocal corrige a visão para uma distância (geralmente longe), sendo necessário óculos para perto. Já a lente multifocal ou trifocal permite enxergar bem de perto, intermédio e longe, reduzindo ou eliminando a necessidade de óculos."}},
+  {"@type":"Question","name":"Qual a diferença entre lente monofocal e multifocal?","acceptedAnswer":{"@type":"Answer","text":"A lente monofocal corrige a visão para uma distância (geralmente longe), sendo necessário óculos para perto. Já a lente multifocal permite enxergar bem de perto, intermédio e longe, reduzindo ou eliminando a necessidade de óculos."}},
   {"@type":"Question","name":"A catarata pode voltar após a cirurgia?","acceptedAnswer":{"@type":"Answer","text":"Não. A catarata é a opacificação do cristalino natural do olho, que é removido e substituído por uma lente artificial durante a cirurgia. Como a lente artificial não envelhece, a catarata não volta."}}
 ]}
 </script>
@@ -365,20 +365,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .preco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:40px}
 .preco-card{
   border-radius:20px;padding:32px 28px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);
+  background:var(--cream);
   position:relative;overflow:hidden;
   transition:transform 0.3s ease,box-shadow 0.3s ease,border-color 0.3s ease;
 }
 .preco-card:hover{
   transform:translateY(-4px) scale(1.02);
-  box-shadow:0 12px 40px rgba(0,0,0,0.25);
-  border-color:rgba(255,255,255,0.18);
+  box-shadow:0 12px 40px rgba(0,0,0,0.15);
+  border-color:rgba(30,42,58,0.15);
 }
 .preco-card.destaque{
   border-color:var(--gold);
-  background:rgba(201,169,97,0.06);
-  box-shadow:0 0 40px rgba(201,169,97,0.12);
+  background:var(--white);
+  box-shadow:0 0 40px rgba(201,169,97,0.15);
 }
 .preco-card.destaque::before{
   content:'';
@@ -389,7 +389,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 }
 @keyframes shimmer{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .preco-card.destaque:hover{
-  box-shadow:0 12px 50px rgba(201,169,97,0.25);
+  box-shadow:0 12px 50px rgba(201,169,97,0.3);
   border-color:var(--gold);
 }
 .preco-card-badge{
@@ -399,18 +399,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   padding:4px 10px;border-radius:20px;
 }
 .preco-card-icon{display:none}
-.preco-card-name{font-family:var(--font-heading);font-size:22px;color:#fff;margin-bottom:6px}
-.preco-card-desc{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:20px;line-height:1.6}
+.preco-card-name{font-family:var(--font-heading);font-size:22px;color:var(--navy-deep);margin-bottom:6px}
+.preco-card-desc{font-size:13px;color:var(--text-muted);margin-bottom:20px;line-height:1.6}
 .preco-card-valor{
   font-family:var(--font-heading);font-size:36px;color:var(--gold);font-weight:700;
   margin-bottom:4px;line-height:1;
 }
-.preco-card-valor span{font-size:16px;font-weight:400;color:rgba(255,255,255,0.5)}
-.preco-card-parcela{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:24px}
+.preco-card-valor span{font-size:16px;font-weight:400;color:var(--text-muted)}
+.preco-card-parcela{font-size:12px;color:var(--text-muted);margin-bottom:24px}
 .preco-card-itens{list-style:none;margin-bottom:28px}
 .preco-card-itens li{
-  font-size:13px;color:rgba(255,255,255,0.7);padding:6px 0;
-  border-bottom:1px solid rgba(255,255,255,0.06);
+  font-size:13px;color:var(--text-body);padding:6px 0;
+  border-bottom:1px solid var(--border);
   display:flex;align-items:center;gap:8px;
 }
 .preco-card-itens li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
@@ -727,13 +727,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       <div class="preco-card destaque fade-in-up delay-2">
         <div class="preco-card-badge">Mais escolhido</div>
         <div class="preco-card-name">Pacote Premium</div>
-        <div class="preco-card-desc">Lente multifocal ou trifocal: liberdade de enxergar de perto, intermédio e longe sem óculos.</div>
+        <div class="preco-card-desc">Lente multifocal: liberdade de enxergar de perto, intermédio e longe sem óculos.</div>
         <div class="preco-card-valor"><span>a partir de </span>R$&nbsp;5.500</div>
         <div class="preco-card-parcela">por olho &mdash; ou até 10x sem juros</div>
         <ul class="preco-card-itens">
           <li>Consulta pré-operatória completa</li>
           <li>Exames biométricos incluso</li>
-          <li>Lente multifocal ou trifocal premium</li>
+          <li>Lente multifocal premium</li>
           <li>Cirurgia com anestesia local e sedação</li>
           <li>Retorno pós-operatório</li>
           <li>Redução máxima de dependência de óculos</li>
@@ -991,7 +991,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p>A <strong>lente monofocal</strong> corrige a visão para uma distância (geralmente longe), sendo necessário óculos para perto. Já a <strong>lente multifocal ou trifocal</strong> permite enxergar bem de perto, intermédio e longe, reduzindo ou eliminando a necessidade de óculos. A indicação depende do estilo de vida do paciente e da avaliação pré-operatória.</p>
+          <p>A <strong>lente monofocal</strong> corrige a visão para uma distância (geralmente longe), sendo necessário óculos para perto. Já a <strong>lente multifocal</strong> permite enxergar bem de perto, intermédio e longe, reduzindo ou eliminando a necessidade de óculos. A indicação depende do estilo de vida do paciente e da avaliação pré-operatória.</p>
         </div>
       </div>
       <div class="faq-item">
