@@ -20,6 +20,9 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.youtube.com">
 <link rel="preload" as="image" href="van-gogh-hero-900w.webp" fetchpriority="high" imagesrcset="van-gogh-hero-600w.webp 600w, van-gogh-hero-900w.webp 900w" imagesizes="100vw">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
@@ -323,6 +326,50 @@ a{text-decoration:none;color:inherit}
 /* FOCUS */
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
 
+/* COOKIE BANNER LGPD */
+#cookie-banner{
+  position:fixed;bottom:80px;left:0;right:0;z-index:1000;
+  background:var(--navy-deep);border-top:2px solid var(--gold);
+  padding:14px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+  box-shadow:0 -4px 24px rgba(0,0,0,0.3);
+  animation:slideUp 0.4s ease both;
+  font-size:13px;color:rgba(255,255,255,0.75);line-height:1.5;
+}
+#cookie-banner.hidden{display:none}
+#cookie-banner p{flex:1;min-width:200px;margin:0}
+#cookie-banner a{color:var(--gold);text-decoration:underline}
+.cookie-btn-accept{
+  background:var(--gold);color:var(--navy-deep);
+  border:none;border-radius:8px;padding:9px 20px;
+  font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;
+  font-family:var(--font-body);
+}
+.cookie-btn-reject{
+  background:transparent;color:rgba(255,255,255,0.5);
+  border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:8px 16px;
+  font-size:12px;cursor:pointer;white-space:nowrap;
+  font-family:var(--font-body);
+}
+.cookie-btn-accept:hover{background:var(--gold-light)}
+.cookie-btn-reject:hover{color:rgba(255,255,255,0.8)}
+
+/* LAZY VIDEO THUMBNAIL */
+.media-lazy-thumb{
+  position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111;cursor:pointer;
+}
+.media-lazy-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 0.4s}
+.media-lazy-thumb:hover img{transform:scale(1.04)}
+.media-lazy-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.25);transition:background 0.3s;
+}
+.media-lazy-thumb:hover .media-lazy-play{background:rgba(0,0,0,0.4)}
+.media-lazy-play svg{width:52px;height:52px;fill:white;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.6));transition:transform 0.2s}
+.media-lazy-thumb:hover .media-lazy-play svg{transform:scale(1.1)}
+.media-lazy-thumb iframe{
+  position:absolute;inset:0;width:100%;height:100%;border:0;
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner{padding:36px 20px 44px}
@@ -541,50 +588,54 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
       <h2 class="section-title">Referência em grandes veículos nacionais</h2>
     </div>
     <div class="media-grid">
-      <a class="media-card" href="https://m.youtube.com/watch?v=WQ9cAJB8FV0" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
-        <div class="media-thumb">
-          <img src="midia-ressoar.webp" alt="Dr. Fernando Drudi no Programa Ressoar" loading="lazy" decoding="async" width="640" height="295">
-          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+      <!-- Card 1: CNN (destaque) -->
+      <div class="media-card" style="border-color:rgba(201,169,97,0.3);box-shadow:0 0 0 1px rgba(201,169,97,0.15)">
+        <div class="media-lazy-thumb" data-video-id="WQ9cAJB8FV0" onclick="loadYT(this)" role="button" aria-label="Assistir Dr. Fernando Drudi na CNN Brasil">
+          <img src="midia-cnn.webp" alt="Dr. Fernando Drudi na CNN Brasil" loading="lazy" decoding="async" width="640" height="360">
+          <div class="media-lazy-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="media-body">
+          <div class="media-source" style="color:var(--gold);font-size:11px;font-weight:800">&#9733; CNN Brasil — Destaque</div>
+          <div class="media-title">Dr. Fernando na CNN Brasil</div>
+          <div class="media-desc">Participação ao vivo abordando avanços da oftalmologia moderna.</div>
+        </div>
+      </div>
+      <!-- Card 2: Ressoar -->
+      <div class="media-card">
+        <div class="media-lazy-thumb" data-video-id="WQ9cAJB8FV0" onclick="loadYT(this)" role="button" aria-label="Assistir Dr. Fernando Drudi no Programa Ressoar">
+          <img src="midia-ressoar.webp" alt="Dr. Fernando Drudi no Programa Ressoar" loading="lazy" decoding="async" width="640" height="360">
+          <div class="media-lazy-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="media-body">
           <div class="media-source">Instituto Ressoar — Record</div>
           <div class="media-title">Dr. Fernando no Programa Ressoar</div>
           <div class="media-desc">Projeto humanitário de cirurgias gratuitas para comunidades da Amazônia.</div>
         </div>
-      </a>
-      <a class="media-card" href="https://www.cnnbrasil.com.br" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
-        <div class="media-thumb">
-          <img src="midia-cnn.webp" alt="Dr. Fernando Drudi na CNN Brasil" loading="lazy" decoding="async" width="640" height="295">
-          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-        </div>
-        <div class="media-body">
-          <div class="media-source">CNN Brasil — Correspondente Médico</div>
-          <div class="media-title">Dr. Fernando na CNN Brasil</div>
-          <div class="media-desc">Participação ao vivo abordando avanços da oftalmologia moderna.</div>
-        </div>
-      </a>
-      <a class="media-card" href="https://www.tiktok.com/@dra.priscillalmeida/video/7112464428955602182" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
-        <div class="media-thumb">
-          <img src="midia-voce-bonita-2.webp" alt="Dra. Priscilla no Você Bonita TV Gazeta" loading="lazy" decoding="async" width="640" height="295">
-          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+      </div>
+      <!-- Card 3: Você Bonita -->
+      <div class="media-card">
+        <div class="media-lazy-thumb" data-video-id="7112464428955602182" onclick="loadYT(this)" role="button" aria-label="Assistir Dra. Priscilla no Você Bonita">
+          <img src="midia-voce-bonita-2.webp" alt="Dra. Priscilla no Você Bonita TV Gazeta" loading="lazy" decoding="async" width="640" height="360">
+          <div class="media-lazy-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="media-body">
           <div class="media-source">Você Bonita — TV Gazeta</div>
           <div class="media-title">Dra. Priscilla no Você Bonita</div>
           <div class="media-desc">Orientação sobre causas e tratamentos para olho seco e saúde ocular.</div>
         </div>
-      </a>
-      <a class="media-card" href="https://m.youtube.com/watch?v=mQ1aQH2VbYk" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
-        <div class="media-thumb">
-          <img src="midia-interioriza.webp" alt="Dra. Priscilla e Dr. Fernando no Programa Interioriza" loading="lazy" decoding="async" width="640" height="295">
-          <div class="media-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+      </div>
+      <!-- Card 4: Interioriza -->
+      <div class="media-card">
+        <div class="media-lazy-thumb" data-video-id="mQ1aQH2VbYk" onclick="loadYT(this)" role="button" aria-label="Assistir Dra. Priscilla e Dr. Fernando no Programa Interioriza">
+          <img src="midia-interioriza.webp" alt="Dra. Priscilla e Dr. Fernando no Programa Interioriza" loading="lazy" decoding="async" width="640" height="360">
+          <div class="media-lazy-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="media-body">
           <div class="media-source">Programa Interioriza</div>
           <div class="media-title">Dra. Priscilla e Dr. Fernando no Interioriza</div>
           <div class="media-desc">Saúde ocular e cirurgias levadas ao interior de São Paulo.</div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -610,28 +661,28 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   <div class="footer-units">
     <div class="footer-unit">
       <strong>Guarulhos</strong>
-      <span>R. Sete de Setembro, 1090 — Centro</span>
-      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Guarulhos" target="_blank" rel="noopener">Ver no mapa</a>
+      <span>R. Sete de Setembro, 375</span>
+      <a href="https://maps.google.com/?q=Rua+Sete+de+Setembro+375+Guarulhos+SP" target="_blank" rel="noopener">Ver no mapa</a>
     </div>
     <div class="footer-unit">
       <strong>Santana</strong>
-      <span>Av. Engenheiro Caetano Álvares, 600</span>
-      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Santana+SP" target="_blank" rel="noopener">Ver no mapa</a>
+      <span>R. Dr. César, 130</span>
+      <a href="https://maps.google.com/?q=Rua+Dr+C%C3%A9sar+130+Santana+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Ver no mapa</a>
     </div>
     <div class="footer-unit">
       <strong>Tatuaé</strong>
-      <span>R. Frei Caneca, 1 — Tatuaé</span>
-      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Tatua%C3%A9+SP" target="_blank" rel="noopener">Ver no mapa</a>
+      <span>R. Tuiuti, 2429</span>
+      <a href="https://maps.google.com/?q=Rua+Tuiuti+2429+Tatua%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Ver no mapa</a>
     </div>
     <div class="footer-unit">
       <strong>Lapa</strong>
-      <span>Av. Brigadeiro Luiz Antônio, 2050</span>
-      <a href="https://maps.google.com/?q=Drudi+e+Almeida+Lapa+SP" target="_blank" rel="noopener">Ver no mapa</a>
+      <span>R. Barão de Jundiai, 221</span>
+      <a href="https://maps.google.com/?q=Rua+Bar%C3%A3o+de+Jundiai+221+Lapa+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Ver no mapa</a>
     </div>
     <div class="footer-unit">
       <strong>São Miguel</strong>
-      <span>Av. Marechal Tito, 3000</span>
-      <a href="https://maps.google.com/?q=Drudi+e+Almeida+S%C3%A3o+Miguel+SP" target="_blank" rel="noopener">Ver no mapa</a>
+      <span>R. Bernardo Marcondes, 108</span>
+      <a href="https://maps.google.com/?q=Rua+Bernardo+Marcondes+108+S%C3%A3o+Miguel+Paulista+SP" target="_blank" rel="noopener">Ver no mapa</a>
     </div>
   </div>
   <div class="footer-divider"></div>
@@ -642,6 +693,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
     · <a href="https://institutodrudiealmeida.com.br/politica-de-privacidade">Política de Privacidade</a>
   </p>
 </footer>
+
+<!-- BANNER LGPD -->
+<div id="cookie-banner" class="hidden" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos cookies e tecnologias semelhantes para melhorar sua experiência e medir o desempenho das nossas campanhas. Ao clicar em <strong>Aceitar</strong>, você concorda com o uso de cookies analíticos e de marketing conforme nossa <a href="https://institutodrudiealmeida.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+  <button class="cookie-btn-accept" onclick="cookieConsent(true)">Aceitar</button>
+  <button class="cookie-btn-reject" onclick="cookieConsent(false)">Recusar</button>
+</div>
 
 <!-- STICKY BAR -->
 <div class="sticky-bar">
@@ -665,6 +723,61 @@ function updateWaLinks(){
   var href='https://wa.me/5511916544653?text='+encodeURIComponent(msg);
   document.querySelectorAll('.js-wa').forEach(function(el){el.href=href});
 }
+
+// Lazy YouTube: só carrega o iframe ao clicar
+function loadYT(el){
+  var id=el.getAttribute('data-video-id');
+  if(!id)return;
+  // Verifica se é ID do YouTube (11 chars) ou TikTok
+  var iframe=document.createElement('iframe');
+  iframe.setAttribute('src','https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0');
+  iframe.setAttribute('allow','autoplay;encrypted-media;picture-in-picture');
+  iframe.setAttribute('allowfullscreen','');
+  iframe.setAttribute('loading','lazy');
+  // Remove thumbnail e play button, insere iframe
+  el.querySelector('img').style.display='none';
+  el.querySelector('.media-lazy-play').style.display='none';
+  el.appendChild(iframe);
+  el.style.cursor='default';
+  el.onclick=null;
+}
+
+// LGPD Cookie Consent
+(function(){
+  var consent=localStorage.getItem('cookie_consent');
+  if(consent===null){
+    // Mostrar banner após 1.5s
+    setTimeout(function(){
+      var b=document.getElementById('cookie-banner');
+      if(b)b.classList.remove('hidden');
+    },1500);
+  } else if(consent==='true'){
+    // Já aceitou: carregar GA imediatamente
+    loadGA();
+  }
+  // Se recusou (consent==='false'): não carrega GA
+})();
+
+function cookieConsent(accepted){
+  localStorage.setItem('cookie_consent', accepted ? 'true' : 'false');
+  var b=document.getElementById('cookie-banner');
+  if(b)b.classList.add('hidden');
+  if(accepted){
+    loadGA();
+    if(typeof gtag==='function'){
+      gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted'});
+    }
+  } else {
+    // Bloquear carregamento do GA
+    _gaLoaded=true; // previne carregamento futuro
+    if(typeof gtag==='function'){
+      gtag('consent','update',{'analytics_storage':'denied','ad_storage':'denied'});
+    }
+  }
+}
+
+// Sobrescrever o listener de interação para respeitar o consentimento
+// O loadGA já verifica _gaLoaded, então se consent==='false' e _gaLoaded=true, não carrega
 </script>
 </body>
 </html>
