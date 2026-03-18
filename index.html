@@ -28,12 +28,18 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
 <!-- GA4 + Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3TM41VL1E"></script>
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;
 gtag('js',new Date());
-gtag('config','G-X3TM41VL1E',{send_page_view:true});
-gtag('config','AW-17598191636');
+(function(){
+  var s=document.createElement('script');s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-X3TM41VL1E';
+  s.onload=function(){
+    gtag('config','G-X3TM41VL1E',{send_page_view:true});
+    gtag('config','AW-17598191636');
+  };
+  document.head.appendChild(s);
+})();
 // Scroll depth tracking
 var _scrollMarks={25:false,50:false,75:false,100:false};
 var _scrollTicking=false;
@@ -1165,21 +1171,23 @@ function toggleFaq(btn){
 
 // IntersectionObserver para animações de entrada
 (function(){
-  if(!('IntersectionObserver' in window)){
-    // Fallback: mostrar tudo imediatamente em browsers antigos
-    document.querySelectorAll('.fade-in-up').forEach(function(el){el.classList.add('visible');});
-    return;
-  }
+  var els=document.querySelectorAll('.fade-in-up');
+  function showAll(){els.forEach(function(el){el.classList.add('visible');});}
+  // Timeout de segurança: garante visibilidade mesmo se o observer falhar (Samsung Internet, etc)
+  var safetyTimer=setTimeout(showAll,600);
+  if(!('IntersectionObserver' in window)){clearTimeout(safetyTimer);showAll();return;}
   var observer=new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
     });
-  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.fade-in-up').forEach(function(el){
-    observer.observe(el);
+  },{threshold:0,rootMargin:'0px'});
+  els.forEach(function(el){observer.observe(el);});
+  // Mostrar imediatamente elementos já visíveis na viewport
+  requestAnimationFrame(function(){
+    els.forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight&&r.bottom>=0){el.classList.add('visible');}
+    });
   });
 })();
 
